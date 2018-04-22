@@ -1,104 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:orientation="vertical"
-tools:context="com.example.dell.DDAPP.BMRActivity">
 
-<EditText
-    android:id="@+id/weight"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:hint="Weight in kg"
-    android:inputType="number|numberDecimal" />
+    <LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.DDAPP.BMRActivity">
 
-<TextView
-    android:id="@+id/textView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Weight(kg)"
-    android:textSize="20sp"
-    />
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
 
-<EditText
-    android:id="@+id/height"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:hint="height in cm"
-    android:inputType="number|numberDecimal" />
-
-<TextView
-    android:id="@+id/textView3"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Height(cm)"
-    android:textSize="20sp" />
-
-<EditText
-    android:id="@+id/age"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:hint="age in years"
-    android:inputType="number" />
-
-<TextView
-    android:id="@+id/textView4"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Age(year)"
-    android:textSize="20sp" />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+            android:hint="User Name"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:hint="age in years"
+        android:inputType="number"
+        />        </LinearLayout>
 
 
-<RadioGroup
-    android:id="@+id/radiogroup"
-    android:layout_width="130dp"
-    android:layout_height="60dp">
+    <LinearLayout android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
 
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:hint="height in cm"
+                android:inputType="number|numberDecimal"
+                android:layout_marginTop="20dp"
+                 />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                android:hint="Weight in kg"
+                android:inputType="number|numberDecimal"
+              />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp">
+
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Female" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/Food_Type"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp">
 
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/Veg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-
-        android:text="Male" />
+        android:text="Vegetarian" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/NonVeg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Non-Vegetarian "/>
+    </RadioGroup>
+        </LinearLayout>
 
-        android:text="Female" />
-</RadioGroup>
-
-<Button
-    android:id="@+id/button_bmr"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:text="BMR Calc" />
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
 
 
-<TextView
-    android:id="@+id/view_resultBMR"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_below="@+id/button_bmr"
-    android:layout_gravity="center_horizontal"
-    android:gravity="center_horizontal"
-    android:paddingTop="120dp"
-    android:textSize="20sp" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="Doctor's Contact No."
+    />
 
+        <EditText
+            android:id="@+id/glucose"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+
+            android:ems="10"
+            android:gravity="center"
+            android:hint="glucose HBA1C %"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint=" Doctor's Contact No."
+            android:layout_marginStart="8dp"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_bmr"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:text="Save and Continue" />
 
 </LinearLayout>
-
